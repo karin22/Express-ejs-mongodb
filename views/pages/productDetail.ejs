@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+<div class="container">
+    <center>
+        <h1>Product </h1>
+    </center>
+    <div>
+        <ul>
+
+            <%detail.forEach(function(de){%>
+
+            <div class="form-group">
+                <label for="">ID</label>
+                <input type="text" value="<%=de.ProductID%>" class="form-control" name="" id=""
+                    aria-describedby="helpId" placeholder="" readonly>
+              
+            </div>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" value="<%=de.ProductName%>" class="form-control" name="" id=""
+                    aria-describedby="helpId" placeholder="" readonly>
+              
+            </div>
+            <div class="form-group">
+                <label for="">Quantity Per Unit</label>
+                <input type="text" value="<%=de.QuantityPerUnit%>" class="form-control" name="" id=""
+                    aria-describedby="helpId" placeholder="" readonly>
+              
+            </div>
+            <div class="form-group">
+                <label for="">Unit Price</label>
+                <input type="text" value="<%=de.UnitPrice%>" class="form-control" name="" id=""
+                    aria-describedby="helpId" placeholder="" readonly>
+              
+            </div>
+            <div class="form-group">
+                <label for="">Units in Stock</label>
+                <input type="text" value="<%=de.UnitsInStock%>" class="form-control" name="" id=""
+                    aria-describedby="helpId" placeholder="" readonly>
+             
+            </div>
+
+            <%});%>
+            <a name="" id="" class="btn btn-primary" href="/product" role="button">Back to product list</a>
+        </ul>
+
+    </div>
+</div>
+<% include ../partials/footer %>

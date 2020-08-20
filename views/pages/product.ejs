@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+<div class="container">
+
+    <h1>Product</h1>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <%product.forEach(function(ca){ %>
+            <tr>
+
+                <td scope="row"><%=ca.ProductID%></td>
+                <td><%=ca.ProductName%></td>
+                <td><a href="productDetail/<%=ca.ProductID%>" class="btn btn-info"> View Detail</a></td>
+                </form>
+            </tr>
+            <%});%>
+        </tbody>
+    </table>
+
+</div>
+<% include ../partials/footer %>
